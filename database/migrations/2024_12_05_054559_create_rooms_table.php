@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->string('room_number')->unique();
+            $table->decimal('monthly_rate', 10, 2);
             $table->text('facilities')->nullable();
             $table->string('floor');
             $table->timestamps();
